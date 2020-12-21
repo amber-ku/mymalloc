@@ -1,5 +1,5 @@
 # mymalloc
-This is Assignment1 in CS 214:System Programming, Fall 2020 \
+This is Assignment1 of CS 214:System Programming, Fall 2020 \
 Completed by Hsinghui Ku & Chang Li
 ## Description
 In this assignment, we implement malloc() and free() library calls for dynamic memory
