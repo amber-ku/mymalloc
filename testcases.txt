@@ -1,0 +1,190 @@
+Assignment 1: ++Malloc
+By Chang Li & Hsinghui Ku
+
+Testplan of workload D,E
+
+
+Workload D:
+For workloadD, in order to test fragment memory, we malloc and make our memory full, and randomly free few of them, and request a block smaller than the total memory but larger than any free block.
+Workload E:
+ This workload will randomly request memory between 1 and 100 bytes, 
+ and randomly free them to test if free() function merges free block successfully. 
+
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Output:
+
+Testing basic cases:
+--------------------
+A: Free()ing addresses that are not pointers:
+
+
+B: Free()ing pointers that were not allocated by malloc():
+Error: attempt to free illegal memory address in file: "memgrind.c" line: #35
+Error: attempt to free NULL pointer in file: "memgrind.c" line: #37
+
+
+C:Redundant free()ing of the same pointer:
+Error: attempt to free unallocated memory in file: "memgrind.c" line: #43
+
+
+D: Saturation of dynamic memory:
+Error: memory requested is too large in file: "memgrind.c" line: #52
+-------------------------------
+
+Workloads:
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Error: no available memory in file: "memgrind.c" line: #180
+Error: no available memory in file: "memgrind.c" line: #196
+Error: no available memory in file: "memgrind.c" line: #197
+Time for Test A: 0.000093 (seconds)
+Time for Test B: 0.001143 (seconds)
+Time for Test C: 0.000302 (seconds)
+Time for Test D: 0.015468 (seconds)
+Time for Test E: 0.000120 (seconds)
